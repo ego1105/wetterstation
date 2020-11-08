@@ -22,6 +22,8 @@
 # 
 # m h  dom mon dow   command
 
-* * * * * /home/pi/devel/wetterstation/wetterstation_logger.sh
+*/5 * * * * /home/pi/devel/wetterstation/bme680_display.sh
 
-*/5 * * * * /home/pi/devel/wetterstation/wetterstation.sh
+
+
+
