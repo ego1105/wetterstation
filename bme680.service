@@ -1,0 +1,15 @@
+[Unit]
+Description=bme680 logger service
+After=network.target systemd-timesyncd
+
+[Service]
+ExecStartPre=sleep 10
+ExecStart=/usr/bin/python3 -u bme680_logger.py
+WorkingDirectory=/home/pi/devel/wetterstation
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
